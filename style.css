@@ -1,0 +1,107 @@
+body {
+    background-color: yellow;
+    margin: 0px;
+}
+
+.presentaion-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.presentaion-arrow_back {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 9999;
+    background:
+    rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    border: medium none;
+    outline: currentcolor none 0px;
+    padding: 5px;
+}
+
+.presentaion-arrow_forward {
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 50px);
+    transform: translateY(-50%);
+    z-index: 9999;
+    background:
+    rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    border: medium none;
+    outline: currentcolor none 0px;
+    padding: 5px;
+}
+
+.presentaion-arrow_back:hover, .presentaion-arrow_forward:hover {
+    background-color: rgba(80, 98, 175, 0.48);
+    cursor: pointer;
+}
+
+.presentaion-content {
+    padding: 100px 70px;
+    min-height: 450px;
+}
+
+.presentaion-page {
+    display: none;
+}
+
+.presentaion-progress {
+    height: 10px;
+    position: absolute;
+    bottom: 0%;
+    width: 0%;
+    background-color:#ffff;
+    opacity: 1;
+    margin-left: 0px;
+}
+
+.show {
+    display: inline;
+}
+
+.slideforward {
+    animation: slideforward 1s ease-in-out forwards;
+}
+
+.slidebackward {
+    animation: slidebackward 1s ease-in-out forwards;
+}
+
+.slidein {
+    animation: scale-display .5s ease-in-out forwards;
+}
+
+@keyframes slideforward {
+    from {
+      transform: translate(0%, 0);
+    }
+    to {
+      transform: translate(-100%, 0);
+    }
+}
+
+@keyframes slidebackward {
+    from {
+        transform: translate(0%, 0);
+      }
+      to {
+        transform: translate(100%, 0);
+      }
+}
+
+@keyframes scale-display {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+    -webkit-transform: scale(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+    -webkit-transform: scale(1);
+	}
+}
